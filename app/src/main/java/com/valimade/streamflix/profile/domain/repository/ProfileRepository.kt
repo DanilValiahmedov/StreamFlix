@@ -5,5 +5,5 @@ import com.valimade.streamflix.profile.domain.model.ProfileSuggestion
 
 interface ProfileRepository {
     suspend fun getAllProfile(phone: String): Result<List<ProfileSuggestion>>
-    suspend fun sendSelectedProfile(idProfile: String): Profile
+    suspend fun sendSelectedProfile(idProfile: String): Result<Profile>
 }
